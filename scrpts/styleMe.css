@@ -1,0 +1,286 @@
+/*! normalize.css v1.1.2 | MIT License | git.io/normalize */article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none;height:0}[hidden]{display:none}html{font-size:100%;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif}body{margin:0}a:focus{outline:thin dotted}a:active,a:hover{outline:0}h1{font-size:2em;margin:.67em 0}h2{font-size:1.5em;margin:.83em 0}h3{font-size:1.17em;margin:1em 0}h4{font-size:1em;margin:1.33em 0}h5{font-size:.83em;margin:1.67em 0}h6{font-size:.67em;margin:2.33em 0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}mark{background:#ff0;color:#000}p,pre{margin:1em 0}code,kbd,pre,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}dl,menu,ol,ul{margin:1em 0}dd{margin:0 0 0 40px}menu,ol,ul{padding:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0;white-space:normal;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;*overflow:visible}button[disabled],html input[disabled]{cursor:default}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0;*height:13px;*width:13px}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+/*
+ * original CSS loader concept by Thibaut Courouble : http://goo.gl/UhXKg
+ */
+
+
+/* =========================== FRONTPAGE Animation STYLES ============================*/
+@-webkit-keyframes animateIntro {
+ 0% {
+   opacity:1;
+ }
+ 15% {
+   opacity:1;
+ }
+ 40% {
+   opacity:0;
+ }
+ 85% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-moz-keyframes animateIntro {
+ 0% {
+   opacity:1;
+ }
+ 15% {
+   opacity:1;
+ }
+ 40% {
+   opacity:0;
+ }
+ 85% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@-o-keyframes animateIntro {
+ 0% {
+   opacity:1;
+ }
+ 15% {
+   opacity:1;
+ }
+ 40% {
+   opacity:0;
+ }
+ 85% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+@keyframes animateIntro {
+ 0% {
+   opacity:1;
+ }
+ 15% {
+   opacity:1;
+ }
+ 40% {
+   opacity:0;
+ }
+ 85% {
+   opacity:0;
+ }
+ 100% {
+   opacity:1;
+ }
+}
+
+
+/* =========================== PAGE STYLES ============================*/
+body{
+  font: 12px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;
+
+}
+
+html,body{
+	height:100%;
+	width:100%;
+    background: #444;
+  background-image:url(http://www.jbee.io/demos/rImgLoad/graphics/strtBG.png);  
+	position:relative;
+	margin:0px; padding:0px;
+	}
+
+
+section
+{
+  width:100%;
+  height:100%;  
+  position:relative;
+
+}
+.page
+{
+	position:absolute;
+	width:100%;
+	height:100%;	
+	top:0px;
+}
+
+
+/* =========================== LOADING FXNS STYLES ============================*/
+.logoPage
+{
+  z-index:20;
+}
+.loadImageContainer
+{
+  width:100%;
+  height:100%;
+  position:relative;
+}
+.loadImageContainer img
+{
+  width: 70% !important;
+  height: auto !important;
+  margin-left:10%;
+  min-width:15em;
+}
+
+
+.progress {
+  padding: 4px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 0.5em;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.75), 0 1px rgba(255, 255, 255, 0.08);
+  margin-top:-15%;
+  width: 50%;
+  min-width:15em; 
+  margin-left:26%; 
+}
+
+.progress div{
+  width:0px;
+  height: 1em;
+  border-radius: 0.3em;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  transition: 0.2s linear;
+  transition-property: width, background-color;
+  box-shadow: 0 0 0.05em 0.05em rgba(0, 0, 0, 0.4), inset 0 1px rgba(255, 255, 255, 0.3), inset 0 -0.2em 0.1em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+.progress .done5 {
+  width: 5%;
+  background-color: #f63a0f;
+}
+
+.progress .done25 {
+  width: 25%;
+  background-color: #f27011;
+}
+
+.progress .done50 {
+  width: 50%;
+  background-color: #f2b01e;
+}
+
+.progress .done75 {
+  width: 75%;
+  background-color: #f2d31b;
+}
+
+.progress .done100 {
+  width: 100%;
+  background-color: #86e01e;
+}
+
+
+.loadImageContainer
+{
+  display:none;
+}
+/* =========================== FULL SIZE IMAGE ANIMATION FXNS ============================*/
+
+
+#fsCContainer
+{
+	width:100%;
+	height:100%;
+	position:relative;
+	overflow:hidden;
+	background-color:#000;
+  opacity:0; 
+}
+
+.fsImg
+{
+  height:100%;  
+}
+
+#fsCContainer img { 
+  position:absolute;
+  top:0px;
+  left:0px;
+  -webkit-animation-name: animateIntro;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 16s;
+
+  -moz-animation-name: animateIntro;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-duration: 16s;
+
+  -o-animation-name: animateIntro;
+  -o-animation-iteration-count: infinite;
+  -o-animation-duration: 16s;
+
+  animation-name: animateIntro;
+  animation-iteration-count: infinite;
+  animation-duration: 16s;
+}
+#fsCContainer img:nth-of-type(1) {
+  -webkit-animation-delay: 12s;
+  -moz-animation-delay: 12s;
+  -o-animation-delay: 12s;
+  animation-delay: 12s;
+}
+#fsCContainer img:nth-of-type(2) {
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -o-animation-delay: 8s;
+  animation-delay: 8s;
+}
+#fsCContainer img:nth-of-type(3) {
+  -webkit-animation-delay: 4s;
+  -moz-animation-delay: 4s;
+  -o-animation-delay: 4s;
+  animation-delay: 4s;
+}
+#fsCContainer img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+  -moz-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0;
+}
+
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+#theResults
+{
+  background-color:#222;
+  width:65%;
+  font-size:1.5em;
+  color:#ccc;
+  margin-left:15%;
+  margin-top:-18%;
+  border-radius: 0.5em;
+}
+
+#theResults p
+{
+  display:block;
+  padding:1%;
+  padding-top:2%;
+  margin-left:30%;
+  width:60%;  
+}
+
+/* CSS Document */
